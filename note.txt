@@ -6,4 +6,4 @@ sum ebxjt
 itn a = ; i <b
 i ++
 
-sum +=i*
+sum +=i*i*i;
