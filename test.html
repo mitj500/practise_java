@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		Capture the backspace and delete on the onkeydown event.
+	</title>
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+	</script>
+</head>
+
+<body style="text-align:center;">
+	<h1 style="color:green;">
+		Mit 
+	<p id="GFG_UP">
+	</p>
+	Type Here:
+	<textarea id="inp" style="width: 300px; height: 300px; resize: none;"></textarea>
+	<br>
+	<p id="GFG_DOWN" style="color: green;">
+	</p>
+	<p id="word_count" style="color: blue;">
+	</p>
+	<script>
+		let up = document.getElementById('GFG_UP');
+		let down = document.getElementById('GFG_DOWN');
+		let el = document.getElementById('inp');
+		let wordCountDisplay = document.getElementById('word_count');
+		let backspaceCount = 0;
+		up.innerHTML = 
+			"Type in the input box to determine the pressed.";
+		el.addEventListener('keydown', function (event) {
+			const key = event.key;
+			if (key === "Backspace" || key === "Delete") {
+				if (key === "Backspace") {
+					backspaceCount++;
+				}
+				$('#GFG_DOWN').html(key + ' is Pressed! Backspace count: ' + backspaceCount);
+			}
+			const text = el.value;
+			const wordCount = text.trim().split(/\s+/).filter(word => word.length > 0).length;
+			wordCountDisplay.innerHTML = 'Word count: ' + wordCount;
+		}); 
+	</script>
+</body>
+
+</html>

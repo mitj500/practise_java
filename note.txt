@@ -1,0 +1,9 @@
+unt  a   as comsm,ebxjt
+n  svcpslvpnesont /
+
+sum ebxjt
+
+itn a = ; i <b
+i ++
+
+sum +=i*
