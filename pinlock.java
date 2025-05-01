@@ -21,6 +21,7 @@ public class pinlock{
                 }
                 
             else
+            
                  {System.out.println("LOCKED");}
         }
     }
